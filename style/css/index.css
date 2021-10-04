@@ -161,15 +161,18 @@ body .general-menu .body .menu p {
   color: #ffffff;
   line-height: 22px;
 }
-body .content {
-  position: relative;
-}
 body .content header {
-  width: 1170px;
+  max-width: 1170px;
   height: 136px;
   background: #ffffff;
 }
-body .content header h1 {
+body .content header .name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+body .content header .name h1 {
+  position: relative;
   margin: 35px 85px 0;
   width: 265px;
   height: 43px;
@@ -177,11 +180,173 @@ body .content header h1 {
   font-size: 32px;
   color: #131313;
 }
-body .content header h1::before {
+body .content header .name h1::before {
   content: "";
+  position: absolute;
   background-image: url("../../assets/Shapes.png");
+  background-size: cover;
+  left: -60px;
+  top: -5px;
   width: 40px;
   height: 40px;
+}
+body .content header .name .share {
+  background: #eaeaea;
+  width: 67px;
+  font-family: Helvetica;
+  font-size: 14px;
+  margin-top: 45px;
+  border-radius: 15px;
+  height: 30px;
+  border: none;
+}
+body .content header .name .chat {
+  position: relative;
+  width: 81px;
+  height: 30px;
+  margin-top: 45px;
+  background: #fff8dd;
+  border-radius: 15px;
+  border: none;
+}
+body .content header .name .chat p {
+  position: absolute;
+  font-family: Helvetica;
+  font-size: 14px;
+  color: #ffc200;
+  top: 7.5px;
+  right: 15px;
+}
+body .content header .interface {
+  display: flex;
+  justify-content: space-between;
+  margin: 22px 30px;
+  max-width: 401px;
+}
+body .content header .interface .tasks,
+body .content header .interface .kanban,
+body .content header .interface .calendar,
+body .content header .interface .files {
+  opacity: 0.7;
+  font-family: Helvetica;
+  font-size: 16px;
+  color: #131313;
+}
+body .content header .interface .activity {
+  font-family: Helvetica;
+  font-size: 16px;
+  color: #131313;
+}
+body .content .body .body-content {
+  width: 730px;
+  height: 591px;
+  background: #ffffff;
+  border-radius: 8px;
+}
+body .content .body .body-content h2 {
+  opacity: 0.5;
+  font-family: Helvetica;
+  font-size: 14px;
+  color: #131313;
+  width: 45px;
+  height: 19px;
+  margin: 30px 35px 0px;
+}
+body .content .body .body-content .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 551px;
+  height: 340px;
+  margin-left: 90px;
+}
+body .content .body .body-content .text p {
+  font-family: Helvetica;
+  font-size: 16px;
+  color: #131313;
+  line-height: 20px;
+}
+body .content .body .body-content .text h4 {
+  padding: 30px 30px;
+  font-family: Helvetica;
+  font-size: 15px;
+  color: #131313;
+  background-color: #f7f6f3;
+  border-radius: 10px;
+  width: 551px;
+}
+body .content .body .body-content .text h4 p {
+  width: 492px;
+}
+body .content .body .body-content .text .darika {
+  position: relative;
+}
+body .content .body .body-content .text .darika::after {
+  position: absolute;
+  content: "";
+  background: #cef9c6;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  top: 0px;
+  left: -60px;
+}
+body .content .body .body-content .text .emilee {
+  position: relative;
+}
+body .content .body .body-content .text .emilee::after {
+  position: absolute;
+  content: "";
+  background: #fff8dd;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  top: 0px;
+  left: -60px;
+}
+body .content .body .body-content .text .darika-2 {
+  position: relative;
+}
+body .content .body .body-content .text .darika-2::after {
+  position: absolute;
+  content: "";
+  background: #e3efff;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  top: 0px;
+  left: -60px;
+}
+body .content .body .body-content .block-img {
+  margin-left: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 492px;
+}
+body .content .body .body-content .block-img .img-1 {
+  background-image: url("../../assets/image.jpg");
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+}
+body .content .body .body-content .block-img .img-2 {
+  background-image: url("../../assets/image.jpg");
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+}
+body .content .body .body-content .block-img .img-3 {
+  background-image: url("../../assets/image.jpg");
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+}
+body .content .body .body-content .block-img .img-4 {
+  background-image: url("../../assets/image.jpg");
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
 }
 
 /*# sourceMappingURL=index.css.map */
