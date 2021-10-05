@@ -1,4 +1,5 @@
 @import "helpers/reset.scss";
+@import "fonts/fonts.scss";
 
 body {
   display: flex;
@@ -125,6 +126,23 @@ body {
           color: #ffffff;
           line-height: 22px;
         }
+
+        .text {
+          display: flex;
+          justify-content: space-between;
+          width: 110px;
+
+          .notification {
+            width: 20px;
+            height: 20px;
+            background-color: #ffc200;
+            border-radius: 10px;
+            font-family: Helvetica;
+            font-size: 13px;
+            color: #131313;
+            text-align: center;
+          }
+        }
       }
     }
   }
@@ -139,49 +157,93 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        h1 {
-          position: relative;
-          margin: 35px 85px 0;
-          width: 265px;
-          height: 43px;
-          font-family: Helvetica;
-          font-size: 32px;
-          color: #131313;
 
-          &::before {
-            content: "";
-            position: absolute;
-            background-image: url("../../assets/Shapes.png");
-            background-size: cover;
-            left: -60px;
-            top: -5px;
-            width: 40px;
-            height: 40px;
+        .block-name {
+          margin: 35px 85px 0;
+          display: flex;
+          justify-content: space-between;
+          width: 310px;
+
+          h1 {
+            position: relative;
+            width: 265px;
+            height: 43px;
+            font-family: Helvetica;
+            font-size: 32px;
+            color: #131313;
+
+            &::before {
+              content: "";
+              position: absolute;
+              background-image: url("../../assets/Shapes.png");
+              background-size: cover;
+              left: -60px;
+              top: -5px;
+              width: 40px;
+              height: 40px;
+              background-color: orange;
+              border-radius: 8px;
+            }
+          }
+
+          .aditional-block {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3px;
+            background-color: rgb(184, 174, 174);
+            width: 30px;
+            height: 30px;
+            border-radius: 15px;
+
+            .dot {
+              margin: 2px;
+              width: 4px;
+              height: 4px;
+              border-radius: 2px;
+              background-color: gray;
+            }
           }
         }
 
-        .share {
-          background: #eaeaea;
-          width: 67px;
-          font-family: Helvetica;
-          font-size: 14px;
-          margin-top: 45px;
-          border-radius: 15px;
-          height: 30px;
-          border: none;
-        }
+        .right-menu {
+          display: flex;
+          justify-content: space-between;
+          margin-right: 30px;
+          width: 278px;
 
-        .chat {
-          position: relative;
-          width: 81px;
-          height: 30px;
-          margin-top: 45px;
-          background: #fff8dd;
-          border-radius: 15px;
-          border: none;
+          .icon-block {
+            margin-top: 44px;
+            display: flex;
+            justify-content: space-between;
+            width: 100px;
 
-          p {
-            position: absolute;
+            .icon {
+              width: 30px;
+              height: 30px;
+              border-radius: 15px;
+              background-color: brown;
+            }
+          }
+
+          .share {
+            background: #eaeaea;
+            width: 67px;
+            font-family: Helvetica;
+            font-size: 14px;
+            margin-top: 45px;
+            border-radius: 15px;
+            height: 30px;
+            border: none;
+          }
+
+          .chat {
+            width: 81px;
+            height: 30px;
+            margin-top: 45px;
+            background: #fff8dd;
+            border-radius: 15px;
+            border: none;
             font-family: Helvetica;
             font-size: 14px;
             color: #ffc200;
@@ -207,13 +269,26 @@ body {
         }
 
         .activity {
+          position: relative;
           font-family: Helvetica;
           font-size: 16px;
           color: #131313;
+
+          &::after {
+            position: absolute;
+            content: "";
+            width: 55px;
+            height: 2px;
+            background: #FFC200;
+            top: 34px;
+            left: -1px;
+          }
         }
       }
     }
     .body {
+      padding: 30px 220px 330px;
+      background-color: rgb(214, 206, 206);
       .body-content {
         width: 730px;
         height: 591px;
@@ -221,6 +296,7 @@ body {
         border-radius: 8px;
 
         h2 {
+          padding-top: 35px;
           opacity: 0.5;
           font-family: Helvetica;
           font-size: 14px;
@@ -252,52 +328,83 @@ body {
             color: #131313;
             background-color: #f7f6f3;
             border-radius: 10px;
-            width: 551px;
+            width: 492px;
 
             p {
               width: 492px;
             }
           }
+          .time {
+            opacity: 0.7;
+            font-family: Helvetica;
+            font-size: 14px;
+            color: #131313;
+            line-height: 20px;
+          }
+          .text-1 {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            width: 610px;
 
-          .darika {
-            position: relative;
-            &::after {
-              position: absolute;
-              content: "";
-              background: #cef9c6;
-              width: 40px;
-              height: 40px;
-              border-radius: 20px;
-              top: 0px;
-              left: -60px;
+            .darika {
+              position: relative;
+              width: 445px;
+              &::after {
+                position: absolute;
+                content: "";
+                background: #cef9c6;
+                width: 40px;
+                height: 40px;
+                border-radius: 20px;
+                top: 0px;
+                left: -60px;
+              }
             }
           }
 
-          .emilee {
-            position: relative;
-            &::after {
-              position: absolute;
-              content: "";
-              background: #fff8dd;
-              width: 40px;
-              height: 40px;
-              border-radius: 20px;
-              top: 0px;
-              left: -60px;
+          .text-2 {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            width: 610px;
+
+            .emilee {
+              position: relative;
+              width: 461px;
+              &::after {
+                position: absolute;
+                content: "";
+                background: #fff8dd;
+                width: 40px;
+                height: 40px;
+                border-radius: 20px;
+                top: 0px;
+                left: -60px;
+              }
             }
           }
 
-          .darika-2 {
-            position: relative;
-            &::after {
-              position: absolute;
-              content: "";
-              background: #e3efff;
-              width: 40px;
-              height: 40px;
-              border-radius: 20px;
-              top: 0px;
-              left: -60px;
+          .text-3 {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            width: 610px;
+
+            .darika-2 {
+              position: relative;
+              width: 461px;
+
+              &::after {
+                position: absolute;
+                content: "";
+                background: #e3efff;
+                width: 40px;
+                height: 40px;
+                border-radius: 20px;
+                top: 0px;
+                left: -60px;
+              }
             }
           }
         }

@@ -48,6 +48,77 @@ table {
   border-spacing: 0;
 }
 
+@font-face {
+  font-family: "Helvetica";
+  src: url("../../fonts/Helvetica/HelveticaBlack.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("../../fonts/Helvetica/HelveticaBlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("../../fonts/Helvetica/HelveticaBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("../../fonts/Helvetica/HelveticaBoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("../../fonts/Helvetica/HelveticaItalic.ttf") format("truetype");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("../../fonts/Helvetica/HelveticaLight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("../../fonts/Helvetica/HelveticaLightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("../../fonts/Helvetica/HelveticaMedium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("../../fonts/Helvetica/HelveticaMediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("../../fonts/Helvetica/HelveticaRegular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("../../fonts/Helvetica/HelveticaThin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("../../fonts/Helvetica/HelveticaThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
 body {
   display: flex;
   flex-direction: row;
@@ -161,6 +232,21 @@ body .general-menu .body .menu p {
   color: #ffffff;
   line-height: 22px;
 }
+body .general-menu .body .menu .text {
+  display: flex;
+  justify-content: space-between;
+  width: 110px;
+}
+body .general-menu .body .menu .text .notification {
+  width: 20px;
+  height: 20px;
+  background-color: #ffc200;
+  border-radius: 10px;
+  font-family: Helvetica;
+  font-size: 13px;
+  color: #131313;
+  text-align: center;
+}
 body .content header {
   max-width: 1170px;
   height: 136px;
@@ -171,16 +257,21 @@ body .content header .name {
   flex-direction: row;
   justify-content: space-between;
 }
-body .content header .name h1 {
-  position: relative;
+body .content header .name .block-name {
   margin: 35px 85px 0;
+  display: flex;
+  justify-content: space-between;
+  width: 310px;
+}
+body .content header .name .block-name h1 {
+  position: relative;
   width: 265px;
   height: 43px;
   font-family: Helvetica;
   font-size: 32px;
   color: #131313;
 }
-body .content header .name h1::before {
+body .content header .name .block-name h1::before {
   content: "";
   position: absolute;
   background-image: url("../../assets/Shapes.png");
@@ -189,8 +280,45 @@ body .content header .name h1::before {
   top: -5px;
   width: 40px;
   height: 40px;
+  background-color: orange;
+  border-radius: 8px;
 }
-body .content header .name .share {
+body .content header .name .block-name .aditional-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3px;
+  background-color: #b8aeae;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+}
+body .content header .name .block-name .aditional-block .dot {
+  margin: 2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: gray;
+}
+body .content header .name .right-menu {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 30px;
+  width: 278px;
+}
+body .content header .name .right-menu .icon-block {
+  margin-top: 44px;
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+}
+body .content header .name .right-menu .icon-block .icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: brown;
+}
+body .content header .name .right-menu .share {
   background: #eaeaea;
   width: 67px;
   font-family: Helvetica;
@@ -200,17 +328,13 @@ body .content header .name .share {
   height: 30px;
   border: none;
 }
-body .content header .name .chat {
-  position: relative;
+body .content header .name .right-menu .chat {
   width: 81px;
   height: 30px;
   margin-top: 45px;
   background: #fff8dd;
   border-radius: 15px;
   border: none;
-}
-body .content header .name .chat p {
-  position: absolute;
   font-family: Helvetica;
   font-size: 14px;
   color: #ffc200;
@@ -233,9 +357,23 @@ body .content header .interface .files {
   color: #131313;
 }
 body .content header .interface .activity {
+  position: relative;
   font-family: Helvetica;
   font-size: 16px;
   color: #131313;
+}
+body .content header .interface .activity::after {
+  position: absolute;
+  content: "";
+  width: 55px;
+  height: 2px;
+  background: #FFC200;
+  top: 34px;
+  left: -1px;
+}
+body .content .body {
+  padding: 30px 220px 330px;
+  background-color: #d6cece;
 }
 body .content .body .body-content {
   width: 730px;
@@ -244,6 +382,7 @@ body .content .body .body-content {
   border-radius: 8px;
 }
 body .content .body .body-content h2 {
+  padding-top: 35px;
   opacity: 0.5;
   font-family: Helvetica;
   font-size: 14px;
@@ -273,15 +412,29 @@ body .content .body .body-content .text h4 {
   color: #131313;
   background-color: #f7f6f3;
   border-radius: 10px;
-  width: 551px;
+  width: 492px;
 }
 body .content .body .body-content .text h4 p {
   width: 492px;
 }
-body .content .body .body-content .text .darika {
-  position: relative;
+body .content .body .body-content .text .time {
+  opacity: 0.7;
+  font-family: Helvetica;
+  font-size: 14px;
+  color: #131313;
+  line-height: 20px;
 }
-body .content .body .body-content .text .darika::after {
+body .content .body .body-content .text .text-1 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  width: 610px;
+}
+body .content .body .body-content .text .text-1 .darika {
+  position: relative;
+  width: 445px;
+}
+body .content .body .body-content .text .text-1 .darika::after {
   position: absolute;
   content: "";
   background: #cef9c6;
@@ -291,10 +444,17 @@ body .content .body .body-content .text .darika::after {
   top: 0px;
   left: -60px;
 }
-body .content .body .body-content .text .emilee {
-  position: relative;
+body .content .body .body-content .text .text-2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  width: 610px;
 }
-body .content .body .body-content .text .emilee::after {
+body .content .body .body-content .text .text-2 .emilee {
+  position: relative;
+  width: 461px;
+}
+body .content .body .body-content .text .text-2 .emilee::after {
   position: absolute;
   content: "";
   background: #fff8dd;
@@ -304,10 +464,17 @@ body .content .body .body-content .text .emilee::after {
   top: 0px;
   left: -60px;
 }
-body .content .body .body-content .text .darika-2 {
-  position: relative;
+body .content .body .body-content .text .text-3 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  width: 610px;
 }
-body .content .body .body-content .text .darika-2::after {
+body .content .body .body-content .text .text-3 .darika-2 {
+  position: relative;
+  width: 461px;
+}
+body .content .body .body-content .text .text-3 .darika-2::after {
   position: absolute;
   content: "";
   background: #e3efff;
