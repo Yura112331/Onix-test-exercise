@@ -120,14 +120,15 @@ table {
   font-style: italic;
 }
 body {
+  width: 100%;
   display: flex;
   flex-direction: row;
 }
 body .general-menu {
   position: relative;
   background-color: black;
-  width: 270px;
-  height: 1117px;
+  min-width: 270px;
+  height: 100%;
 }
 body .general-menu header {
   height: 84px;
@@ -260,8 +261,11 @@ body .general-menu .body .menu .text .notification {
   color: #131313;
   text-align: center;
 }
+body .content {
+  width: 100%;
+  height: 100%;
+}
 body .content header {
-  max-width: 1170px;
   height: 136px;
   background: #ffffff;
 }
@@ -360,10 +364,7 @@ body .content header .interface {
   margin: 22px 30px;
   max-width: 401px;
 }
-body .content header .interface .tasks,
-body .content header .interface .kanban,
-body .content header .interface .calendar,
-body .content header .interface .files {
+body .content header .interface li {
   opacity: 0.7;
   font-family: Helvetica;
   font-size: 16px;
@@ -385,10 +386,11 @@ body .content header .interface .activity::after {
   left: -1px;
 }
 body .content .body {
-  padding: 30px 220px 330px;
+  padding-top: 30px;
   background-color: #d6cece;
 }
 body .content .body .body-content {
+  margin: auto;
   width: 730px;
   height: 591px;
   background: #ffffff;
