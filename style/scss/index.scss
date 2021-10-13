@@ -3,6 +3,7 @@
 
 body {
   width: 100%;
+  max-height: 100vh;
   display: flex;
   flex-direction: row;
 
@@ -29,6 +30,7 @@ body {
           content: "";
           position: absolute;
           background-image: url("../../assets/Logo.svg");
+          cursor: pointer;
           width: 21.6px;
           height: 18.9px;
           left: 30.4px;
@@ -39,6 +41,7 @@ body {
           content: "";
           position: absolute;
           background-image: url("../../assets/Search.svg");
+          cursor: pointer;
           width: 16px;
           height: 16px;
           left: 234px;
@@ -68,6 +71,8 @@ body {
             content: "";
             position: absolute;
             background-image: url("../../assets/face.jpg");
+            background-size: cover;
+            background-position: center;
             width: 48px;
             height: 48px;
             border-radius: 50%;
@@ -86,6 +91,7 @@ body {
           position: absolute;
           display: flex;
           left: 226px;
+          cursor: pointer;
           .dot {
             margin: 2px;
             width: 4px;
@@ -150,6 +156,10 @@ body {
             width: 110px;
 
             p {
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              justify-content: center;
               width: 20px;
               height: 20px;
               background-color: #ffc200;
@@ -157,7 +167,6 @@ body {
               font-family: Helvetica;
               font-size: 13px;
               color: #131313;
-              text-align: center;
             }
           }
         }
@@ -167,6 +176,7 @@ body {
 
   .content {
     width: 100%;
+    height: 100%;
     max-height: 100%;
     header {
       height: 136px;
@@ -196,6 +206,7 @@ body {
               position: absolute;
               background-image: url("../../assets/Shapes.png");
               background-size: cover;
+              cursor: pointer;
               left: -60px;
               top: -5px;
               width: 40px;
@@ -211,6 +222,7 @@ body {
             align-items: center;
             margin-top: 3px;
             background-color: rgb(184, 174, 174);
+            cursor: pointer;
             width: 30px;
             height: 30px;
             border-radius: 15px;
@@ -243,11 +255,13 @@ body {
               &::before {
                 content: "";
                 position: absolute;
+                cursor: pointer;
                 width: 30px;
                 height: 30px;
                 left: -30px;
                 border-radius: 15px;
                 background-image: url("../../assets/face.jpg");
+                background-size: cover;
               }
             }
             .icon1 {
@@ -256,6 +270,7 @@ body {
               &::before {
                 content: "";
                 position: absolute;
+                cursor: pointer;
                 width: 30px;
                 height: 30px;
                 left: -30px;
@@ -269,6 +284,7 @@ body {
               &::before {
                 content: "";
                 position: absolute;
+                cursor: pointer;
                 width: 30px;
                 height: 30px;
                 left: -30px;
@@ -281,6 +297,7 @@ body {
           .share {
             background: #eaeaea;
             width: 67px;
+            cursor: pointer;
             font-family: Helvetica;
             font-size: 14px;
             margin-top: 45px;
@@ -293,6 +310,7 @@ body {
             position: relative;
             width: 81px;
             height: 30px;
+            cursor: pointer;
             margin-top: 45px;
             background: #fff8dd;
             border-radius: 15px;
@@ -305,9 +323,14 @@ body {
             &::before {
               content: "";
               position: absolute;
+              cursor: pointer;
               background-image: url("../../assets/message.png");
+              background-size: cover;
+              background-position: auto;
               width: 20px;
               height: 20px;
+              left: 10px;
+              top: 5px;
             }
           }
         }
@@ -348,15 +371,16 @@ body {
       }
     }
     .body {
-      max-height: 100%;
-      padding-top: 30px;
+      height: calc(100vh - 168px);
       background-color: rgb(214, 206, 206);
+      padding-top: 30px;
       .body-content {
         margin: auto;
         width: 730px;
         height: 591px;
         background: #ffffff;
         border-radius: 8px;
+        padding-left: 90px;
 
         h2 {
           padding-top: 35px;
@@ -366,7 +390,7 @@ body {
           color: #131313;
           width: 45px;
           height: 19px;
-          margin: 30px 35px 0px;
+          margin: 30px 0px 0px;
         }
 
         .text {
@@ -375,7 +399,6 @@ body {
           justify-content: space-around;
           width: 551px;
           height: 340px;
-          margin-left: 90px;
 
           p {
             font-family: Helvetica;

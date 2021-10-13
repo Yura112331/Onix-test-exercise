@@ -121,6 +121,7 @@ table {
 }
 body {
   width: 100%;
+  max-height: 100vh;
   display: flex;
   flex-direction: row;
 }
@@ -147,6 +148,7 @@ body .general-menu header h1::after {
   content: "";
   position: absolute;
   background-image: url("../../assets/Logo.svg");
+  cursor: pointer;
   width: 21.6px;
   height: 18.9px;
   left: 30.4px;
@@ -156,6 +158,7 @@ body .general-menu header h1::before {
   content: "";
   position: absolute;
   background-image: url("../../assets/Search.svg");
+  cursor: pointer;
   width: 16px;
   height: 16px;
   left: 234px;
@@ -181,6 +184,8 @@ body .general-menu .body .product-owner .name::before {
   content: "";
   position: absolute;
   background-image: url("../../assets/face.jpg");
+  background-size: cover;
+  background-position: center;
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -198,6 +203,7 @@ body .general-menu .body .product-owner .dot-block {
   position: absolute;
   display: flex;
   left: 226px;
+  cursor: pointer;
 }
 body .general-menu .body .product-owner .dot-block .dot {
   margin: 2px;
@@ -255,6 +261,10 @@ body .general-menu .body .navigation ul .text {
   width: 110px;
 }
 body .general-menu .body .navigation ul .text p {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 20px;
   height: 20px;
   background-color: #ffc200;
@@ -262,10 +272,10 @@ body .general-menu .body .navigation ul .text p {
   font-family: Helvetica;
   font-size: 13px;
   color: #131313;
-  text-align: center;
 }
 body .content {
   width: 100%;
+  height: 100%;
   max-height: 100%;
 }
 body .content header {
@@ -296,6 +306,7 @@ body .content header .name .block-name h1::before {
   position: absolute;
   background-image: url("../../assets/Shapes.png");
   background-size: cover;
+  cursor: pointer;
   left: -60px;
   top: -5px;
   width: 40px;
@@ -309,6 +320,7 @@ body .content header .name .block-name .aditional-block {
   align-items: center;
   margin-top: 3px;
   background-color: #b8aeae;
+  cursor: pointer;
   width: 30px;
   height: 30px;
   border-radius: 15px;
@@ -338,11 +350,13 @@ body .content header .name .right-menu .icon-block .icon {
 body .content header .name .right-menu .icon-block .icon::before {
   content: "";
   position: absolute;
+  cursor: pointer;
   width: 30px;
   height: 30px;
   left: -30px;
   border-radius: 15px;
   background-image: url("../../assets/face.jpg");
+  background-size: cover;
 }
 body .content header .name .right-menu .icon-block .icon1 {
   position: relative;
@@ -350,6 +364,7 @@ body .content header .name .right-menu .icon-block .icon1 {
 body .content header .name .right-menu .icon-block .icon1::before {
   content: "";
   position: absolute;
+  cursor: pointer;
   width: 30px;
   height: 30px;
   left: -30px;
@@ -362,6 +377,7 @@ body .content header .name .right-menu .icon-block .icon2 {
 body .content header .name .right-menu .icon-block .icon2::before {
   content: "";
   position: absolute;
+  cursor: pointer;
   width: 30px;
   height: 30px;
   left: -30px;
@@ -371,6 +387,7 @@ body .content header .name .right-menu .icon-block .icon2::before {
 body .content header .name .right-menu .share {
   background: #eaeaea;
   width: 67px;
+  cursor: pointer;
   font-family: Helvetica;
   font-size: 14px;
   margin-top: 45px;
@@ -382,6 +399,7 @@ body .content header .name .right-menu .chat {
   position: relative;
   width: 81px;
   height: 30px;
+  cursor: pointer;
   margin-top: 45px;
   background: #fff8dd;
   border-radius: 15px;
@@ -394,9 +412,14 @@ body .content header .name .right-menu .chat {
 body .content header .name .right-menu .chat::before {
   content: "";
   position: absolute;
+  cursor: pointer;
   background-image: url("../../assets/message.png");
+  background-size: cover;
+  background-position: auto;
   width: 20px;
   height: 20px;
+  left: 10px;
+  top: 5px;
 }
 body .content header .interface {
   margin: 22px 30px;
@@ -429,9 +452,9 @@ body .content header .interface .activity::after {
   left: -1px;
 }
 body .content .body {
-  max-height: 100%;
-  padding-top: 30px;
+  height: calc(100vh - 168px);
   background-color: #d6cece;
+  padding-top: 30px;
 }
 body .content .body .body-content {
   margin: auto;
@@ -439,6 +462,7 @@ body .content .body .body-content {
   height: 591px;
   background: #ffffff;
   border-radius: 8px;
+  padding-left: 90px;
 }
 body .content .body .body-content h2 {
   padding-top: 35px;
@@ -448,7 +472,7 @@ body .content .body .body-content h2 {
   color: #131313;
   width: 45px;
   height: 19px;
-  margin: 30px 35px 0px;
+  margin: 30px 0px 0px;
 }
 body .content .body .body-content .text {
   display: flex;
@@ -456,7 +480,6 @@ body .content .body .body-content .text {
   justify-content: space-around;
   width: 551px;
   height: 340px;
-  margin-left: 90px;
 }
 body .content .body .body-content .text p {
   font-family: Helvetica;
