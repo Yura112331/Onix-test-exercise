@@ -129,7 +129,6 @@ body .general-menu {
   position: relative;
   background-color: black;
   min-width: 270px;
-  max-height: 100%;
 }
 body .general-menu header {
   height: 84px;
@@ -163,6 +162,12 @@ body .general-menu header h1::before {
   height: 16px;
   left: 234px;
   top: 33px;
+}
+@media (max-width: 768px) {
+  body .general-menu header {
+    height: 84px;
+    margin: auto;
+  }
 }
 body .general-menu .body .product-owner {
   position: relative;
@@ -212,6 +217,12 @@ body .general-menu .body .product-owner .dot-block .dot {
   border-radius: 2px;
   background-color: gray;
 }
+@media (max-width: 1024px) {
+  body .general-menu .body .product-owner {
+    width: 210px;
+    margin-left: 20px;
+  }
+}
 body .general-menu .body .tasks {
   margin: 20px 30px;
   display: flex;
@@ -232,6 +243,22 @@ body .general-menu .body .tasks p {
   font-family: Helvetica;
   font-size: 12px;
   color: #ffffff;
+}
+@media (max-width: 1024px) {
+  body .general-menu .body .tasks {
+    height: 100%;
+    width: 210px;
+  }
+}
+@media (max-width: 953px) {
+  body .general-menu .body .tasks {
+    margin: auto;
+  }
+}
+@media (max-width: 768px) {
+  body .general-menu .body .tasks {
+    margin: auto;
+  }
 }
 body .general-menu .body .navigation {
   height: 135px;
@@ -273,10 +300,54 @@ body .general-menu .body .navigation ul .text p {
   font-size: 13px;
   color: #131313;
 }
+@media (max-width: 1024px) {
+  body .general-menu .body .navigation ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 1024px) {
+  body .general-menu .body .navigation {
+    height: 100%;
+    width: 300px;
+  }
+}
+@media (max-width: 953px) {
+  body .general-menu .body .navigation {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+}
+@media (max-width: 768px) {
+  body .general-menu .body .navigation {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+}
+@media (max-width: 1024px) {
+  body .general-menu .body {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 1024px) {
+  body .general-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 body .content {
   width: 100%;
-  height: 100%;
-  max-height: 100%;
 }
 body .content header {
   height: 136px;
@@ -355,7 +426,7 @@ body .content header .name .right-menu .icon-block .icon::before {
   height: 30px;
   left: -30px;
   border-radius: 15px;
-  background-image: url("../../assets/face.jpg");
+  background-image: url("../../assets/peaple.png");
   background-size: cover;
 }
 body .content header .name .right-menu .icon-block .icon1 {
@@ -369,7 +440,8 @@ body .content header .name .right-menu .icon-block .icon1::before {
   height: 30px;
   left: -30px;
   border-radius: 15px;
-  background-image: url("../../assets/face.jpg");
+  background-image: url("../../assets/people1.jpg");
+  background-size: cover;
 }
 body .content header .name .right-menu .icon-block .icon2 {
   position: relative;
@@ -382,7 +454,8 @@ body .content header .name .right-menu .icon-block .icon2::before {
   height: 30px;
   left: -30px;
   border-radius: 15px;
-  background-image: url("../../assets/face.jpg");
+  background-image: url("../../assets/people2.jpg");
+  background-size: cover;
 }
 body .content header .name .right-menu .share {
   background: #eaeaea;
@@ -413,13 +486,18 @@ body .content header .name .right-menu .chat::before {
   content: "";
   position: absolute;
   cursor: pointer;
-  background-image: url("../../assets/message.png");
+  background-image: url("../../assets/Combined-Shape@1x.svg");
   background-size: cover;
   background-position: auto;
   width: 20px;
   height: 20px;
   left: 10px;
   top: 5px;
+}
+@media (max-width: 768px) {
+  body .content header .name {
+    flex-direction: column;
+  }
 }
 body .content header .interface {
   margin: 22px 30px;
@@ -451,6 +529,19 @@ body .content header .interface .activity::after {
   top: 34px;
   left: -1px;
 }
+@media (max-width: 768px) {
+  body .content header .interface {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  body .content header {
+    height: 100%;
+  }
+}
 body .content .body {
   height: calc(100vh - 168px);
   background-color: #d6cece;
@@ -458,7 +549,7 @@ body .content .body {
 }
 body .content .body .body-content {
   margin: auto;
-  width: 730px;
+  width: 700px;
   height: 591px;
   background: #ffffff;
   border-radius: 8px;
@@ -488,16 +579,19 @@ body .content .body .body-content .text p {
   line-height: 20px;
 }
 body .content .body .body-content .text h4 {
-  padding: 30px 30px;
+  padding: 30px 33px;
   font-family: Helvetica;
   font-size: 15px;
   color: #131313;
   background-color: #f7f6f3;
   border-radius: 10px;
-  width: 492px;
+  width: 485px;
 }
-body .content .body .body-content .text h4 p {
-  width: 492px;
+@media (max-width: 768px) {
+  body .content .body .body-content .text h4 {
+    width: 340px;
+    padding: 10px 10px;
+  }
 }
 body .content .body .body-content .text .time {
   opacity: 0.7;
@@ -520,11 +614,20 @@ body .content .body .body-content .text .text-1 .darika::after {
   position: absolute;
   content: "";
   background: #cef9c6;
+  background-image: url("../../assets/check-mark.png");
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
   width: 40px;
   height: 40px;
   border-radius: 20px;
   top: 0px;
   left: -60px;
+}
+@media (max-width: 768px) {
+  body .content .body .body-content .text .text-1 {
+    width: 400px;
+  }
 }
 body .content .body .body-content .text .text-2 {
   display: flex;
@@ -540,11 +643,20 @@ body .content .body .body-content .text .text-2 .emilee::after {
   position: absolute;
   content: "";
   background: #fff8dd;
+  background-image: url("../../assets/message.png");
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
   width: 40px;
   height: 40px;
   border-radius: 20px;
   top: 0px;
   left: -60px;
+}
+@media (max-width: 768px) {
+  body .content .body .body-content .text .text-2 {
+    width: 400px;
+  }
 }
 body .content .body .body-content .text .text-3 {
   display: flex;
@@ -554,48 +666,70 @@ body .content .body .body-content .text .text-3 {
 }
 body .content .body .body-content .text .text-3 .darika-2 {
   position: relative;
-  width: 461px;
+  width: 456px;
 }
 body .content .body .body-content .text .text-3 .darika-2::after {
   position: absolute;
   content: "";
   background: #e3efff;
+  background-image: url("../../assets/download.png");
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
   width: 40px;
   height: 40px;
   border-radius: 20px;
   top: 0px;
   left: -60px;
 }
+@media (max-width: 768px) {
+  body .content .body .body-content .text .text-3 {
+    width: 400px;
+  }
+}
 body .content .body .body-content .block-img {
-  margin-left: 90px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 492px;
+  width: 410px;
 }
-body .content .body .body-content .block-img .img-1 {
-  background-image: url("../../assets/image.jpg");
-  width: 100px;
-  height: 100px;
+body .content .body .body-content .block-img .img {
+  width: 90px;
+  height: 90px;
   border-radius: 8px;
 }
-body .content .body .body-content .block-img .img-2 {
-  background-image: url("../../assets/image.jpg");
-  width: 100px;
-  height: 100px;
-  border-radius: 8px;
+@media (max-width: 870px) {
+  body .content .body .body-content {
+    width: 630px;
+    padding-left: 80px;
+  }
 }
-body .content .body .body-content .block-img .img-3 {
-  background-image: url("../../assets/image.jpg");
-  width: 100px;
-  height: 100px;
-  border-radius: 8px;
+@media (max-height: 800px) {
+  body .content .body .body-content {
+    height: 520px;
+  }
 }
-body .content .body .body-content .block-img .img-4 {
-  background-image: url("../../assets/image.jpg");
-  width: 100px;
-  height: 100px;
-  border-radius: 8px;
+@media (max-width: 768px) {
+  body .content .body .body-content {
+    width: 440px;
+    padding-left: 80px;
+  }
+}
+@media (max-width: 1024px) {
+  body .content .body {
+    padding-top: 1px;
+  }
+}
+@media (max-width: 768px) {
+  body .content .body {
+    padding: 0px;
+    background-color: white;
+  }
+}
+@media (max-width: 1024px) {
+  body {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
