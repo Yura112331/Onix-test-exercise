@@ -177,10 +177,6 @@ body {
         @media (max-width: 953px) {
           margin: auto;
         }
-
-        @media (max-width: 768px) {
-          margin: auto;
-        }
       }
 
       .navigation {
@@ -258,13 +254,6 @@ body {
           padding-bottom: 10px;
         }
 
-        @media (max-width: 768px) {
-          width: 100%;
-          display: flex;
-          flex-wrap: wrap;
-          flex-direction: column;
-          padding-bottom: 10px;
-        }
         @media (max-width: 425px) {
           margin: 15px 10px 0px;
         }
