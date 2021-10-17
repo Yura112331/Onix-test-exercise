@@ -181,7 +181,7 @@ body {
 
       .navigation {
         height: 135px;
-
+        display: flex;
         margin: 30px 30px 0px;
         ul {
           display: flex;
@@ -382,7 +382,7 @@ body {
                 cursor: pointer;
                 width: 30px;
                 height: 30px;
-                left: -30px;
+                left: 0px;
                 border-radius: 15px;
                 background-image: url("../../assets/peaple.png");
                 background-size: cover;
@@ -401,7 +401,7 @@ body {
                 cursor: pointer;
                 width: 30px;
                 height: 30px;
-                left: -30px;
+                left: -15px;
                 border-radius: 15px;
                 background-image: url("../../assets/people1.jpg");
                 background-size: cover;
@@ -555,6 +555,7 @@ body {
           width: 45px;
           height: 19px;
           margin: 30px 0px 0px;
+          letter-spacing: 1px;
 
           @media (max-width: 768px) {
             margin: 0px;
@@ -581,13 +582,14 @@ body {
           }
 
           h4 {
-            padding: 30px 33px;
+            padding: 30px 38px;
             font-family: Helvetica;
             font-size: 15px;
             color: #131313;
             background-color: #f7f6f3;
             border-radius: 10px;
-            width: 485px;
+            width: 535px;
+            letter-spacing: 1px;
 
             @media (max-width: 768px) {
               width: 310px;
@@ -617,7 +619,7 @@ body {
             display: flex;
             justify-content: space-between;
             margin-top: 30px;
-            width: 610px;
+            width: 660px;
 
             .darika {
               position: relative;
@@ -674,7 +676,7 @@ body {
             display: flex;
             justify-content: space-between;
             margin-top: 30px;
-            width: 610px;
+            width: 660px;
 
             .emilee {
               position: relative;
@@ -692,6 +694,7 @@ body {
                 border-radius: 20px;
                 top: 0px;
                 left: -60px;
+                letter-spacing: 1px;
 
                 @media (max-width: 768px) {
                   left: -40px;
@@ -731,7 +734,7 @@ body {
             display: flex;
             justify-content: space-between;
             margin-top: 30px;
-            width: 610px;
+            width: 660px;
 
             .darika-2 {
               position: relative;
