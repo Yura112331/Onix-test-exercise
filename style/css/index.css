@@ -265,6 +265,7 @@ body .general-menu .body .tasks {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  cursor: pointer;
 }
 body .general-menu .body .tasks h2 {
   width: 35px;
