@@ -25,16 +25,18 @@ completedTasks.onclick = function () {
   }
 };
 
-const array1 = ["a", "b", "c"];
+const images = ["image.jpg", "img1.png", "img2.png", "img3.png"];
 let blocktest = document.getElementById("block-img");
+images.forEach(function(value) {
+  blocktest.innerHTML += `<img class="img" src="../assets/` + value + `" alt="image" />`;
 
-blocktest.innerHTML += `<img class="img" src="../assets/image.jpg" alt="image" />`;
+ 
+})
 
-/* array1.forEach(function(currentValue, v) {
-  console.log(currentValue, v)
-}); */
-
-/* 1. создать массив строк (название картинок)
-2. вызвать цикл forEach 
-3. создать перменую с группой картинок
- */
+let img = blocktest.querySelectorAll("img");
+img.forEach(function(value, index) {
+ value.addEventListener("click", function(){
+  let notificationNumber = document.getElementById("notification");
+  notificationNumber.innerHTML = index;
+ })
+})
